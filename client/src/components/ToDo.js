@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Checkbox } from "semantic-ui-react";
+import Linkify from "react-linkify";
 
 class ToDo extends Component {
   state = { checked: false };
@@ -18,7 +19,7 @@ class ToDo extends Component {
               textDecoration: this.state.checked ? "line-through" : "none"
             }}
           >
-            {this.props.lab}{" "}
+            <Linkify>{this.props.lab}</Linkify>
           </span>
           <button
             className="mini ui right floated button"
